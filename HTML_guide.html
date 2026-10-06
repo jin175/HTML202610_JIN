@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 기본 문법 가이드</title>
+    <style>
+        body {
+            font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 40px;
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #16a085;
+        }
+        .section {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .tag-name {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .code-block {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Consolas', monospace;
+            margin: 10px 0;
+        }
+        .preview-block {
+            border: 2px dashed #bdc3c7;
+            padding: 15px;
+            background-color: #fdfefe;
+            border-radius: 5px;
+            margin: 10px 0 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #bdc3c7;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🚀 HTML 기본 문법 가이드</h1>
+    <p style="text-align: center; color: #7f8c8d;">웹 개발의 기초가 되는 핵심 HTML 태그들을 정리한 가이드입니다.</p>
+
+    <!-- 1. 문서 기본 구조 -->
+    <div class="section">
+        <h2>1. HTML 문서의 기본 구조</h2>
+        <p>모든 HTML 문서는 아래와 같은 기본 뼈대를 가집니다.</p>
+        <div class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;문서 제목&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    화면에 보여질 실제 내용이 들어갑니다.
+&lt;/body&gt;
+&lt;/html&gt;</div>
+    </div>
+
+    <!-- 2. 텍스트 관련 태그 -->
+    <div class="section">
+        <h2>2. 텍스트 관련 태그</h2>
+
+        <div>
+            <span class="tag-name">&lt;h1&gt; ~ &lt;h6&gt;</span>
+            <p>제목(Heading)을 나타냅니다. 숫자가 작을수록 글자가 크고 중요합니다.</p>
+            <div class="code-block">&lt;h1&gt;가장 큰 제목&lt;/h1&gt;
+&lt;h3&gt;중간 크기 제목&lt;/h3&gt;</div>
+        </div>
+
+        <hr style="border:0; border-top:1px solid #eee; margin:20px 0;">
+
+        <div>
+            <span class="tag-name">&lt;p&gt;</span>
+            <p>단락(Paragraph)을 의미합니다. 일반적인 본문 텍스트를 작성할 때 사용합니다.</p>
+            <div class="code-block">&lt;p&gt;이것은 하나의 문단입니다. 위아래로 약간의 여백이 자동으로 생깁니다.&lt;/p&gt;</div>
+        </div>
+
+        <hr style="border:0; border-top:1px solid #eee; margin:20px 0;">
+
+        <div>
+            <span class="tag-name">&lt;strong&gt;</span> &amp; <span class="tag-name">&lt;b&gt;</span>
+            <p>텍스트를 굵게 표시하여 강조할 때 사용합니다. (웹 접근성 측면에서 <code>&lt;strong&gt;</code>이 의미적 강조를 포함하므로 더 권장됩니다.)</p>
+            <div class="code-block">&lt;p&gt;이 문장에서 &lt;strong&gt;이 부분만 굵게&lt;/strong&gt; 표시됩니다.&lt;/p&gt;</div>
+            <div class="preview-block">
+                <p>이 문장에서 <strong>이 부분만 굵게</strong> 표시됩니다.</p>
+            </div>
+        </div>
+
+        <hr style="border:0; border-top:1px solid #eee; margin:20px 0;">
+
+        <div>
+            <span class="tag-name">&lt;pre&gt;</span>
+            <p>미리 정의된 형식(Preformatted text)을 나타냅니다. 코드에 작성된 띄어쓰기와 줄바꿈을 그대로 화면에 출력합니다.</p>
+            <div class="code-block">&lt;pre&gt;
+  띄어쓰기와 
+    줄바꿈이
+  그대로 
+유지됩니다.
+&lt;/pre&gt;</div>
+            <div class="preview-block">
+<pre>
+  띄어쓰기와 
+    줄바꿈이
+  그대로 
+유지됩니다.
+</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. 공간 및 레이아웃 분할 태그 -->
+    <div class="section">
+        <h2>3. 레이아웃과 그룹화 (블록 vs 인라인)</h2>
+
+        <div>
+            <span class="tag-name">&lt;div&gt;</span>
+            <p><strong>블록(Block) 요소</strong>입니다. 가로 영역 전체를 차지하며, 레이아웃을 나누거나 여러 태그를 하나의 큰 박스로 묶을 때 주로 사용합니다.</p>
+            <div class="code-block">&lt;div style="background-color: lightblue;"&gt;첫 번째 박스 영역&lt;/div&gt;
+&lt;div style="background-color: lightpink;"&gt;두 번째 박스 영역 (줄이 바뀝니다)&lt;/div&gt;</div>
+            <div class="preview-block">
+                <div style="background-color: lightblue; padding:5px;">첫 번째 박스 영역</div>
+                <div style="background-color: lightpink; padding:5px;">두 번째 박스 영역 (줄이 바뀝니다)</div>
+            </div>
+        </div>
+
+        <hr style="border:0; border-top:1px solid #eee; margin:20px 0;">
+
+        <div>
+            <span class="tag-name">&lt;span&gt;</span>
+            <p><strong>인라인(Inline) 요소</strong>입니다. 콘텐츠의 크기만큼만 공간을 차지하며, 문장 중간에 특정 글자의 색상이나 스타일을 변경할 때 사용합니다.</p>
+            <div class="code-block">&lt;p&gt;안녕하세요, &lt;span style="color: red;"&gt;홍길동&lt;/span&gt;님!&lt;/p&gt;</div>
+            <div class="preview-block">
+                <p>안녕하세요, <span style="color: red; font-weight: bold;">홍길동</span>님!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. 미디어 및 링크 태그 -->
+    <div class="section">
+        <h2>4. 미디어 및 링크 태그</h2>
+
+        <div>
+            <span class="tag-name">&lt;img&gt;</span>
+            <p>이미지를 삽입합니다. 닫는 태그가 없는 단일 태그입니다. <code>src</code>(이미지 경로)와 <code>alt</code>(대체 텍스트) 속성이 필수입니다.</p>
+            <div class="code-block">&lt;img src="이미지주소.jpg" alt="귀여운 고양이 사진" width="200"&gt;</div>
+        </div>
+
+        <hr style="border:0; border-top:1px solid #eee; margin:20px 0;">
+
+        <div>
+            <span class="tag-name">&lt;video&gt;</span>
+            <p>비디오 영상을 삽입합니다. <code>controls</code> 속성을 넣으면 재생/정지 버튼이 생성됩니다.</p>
+            <div class="code-block">&lt;video src="영상주소.mp4" width="300" controls autoplay muted&gt;&lt;/video&gt;</div>
+            <ul>
+                <li><code>controls</code> : 조작 패널 표시</li>
+                <li><code>autoplay</code> : 자동 재생 (보통 <code>muted</code>와 함께 써야 크롬 등에서 작동함)</li>
+                <li><code>muted</code> : 음소거</li>
+            </ul>
+        </div>
+
+        <hr style="border:0; border-top:1px solid #eee; margin:20px 0;">
+
+        <div>
+            <span class="tag-name">&lt;a&gt;</span>
+            <p>다른 페이지로 이동하는 하이퍼링크를 만듭니다. <code>href</code> 속성에 이동할 주소를 적습니다.</p>
+            <div class="code-block">&lt;a href="https://www.google.com" target="_blank"&gt;구글로 이동 (새창)&lt;/a&gt;</div>
+        </div>
+    </div>
+
+    <!-- 5. 표(Table) 관련 태그 -->
+    <div class="section">
+        <h2>5. 표 만들기 태그</h2>
+        <p>표를 구성할 때는 여러 태그를 조합해서 사용합니다.</p>
+        <ul>
+            <li><span class="tag-name">&lt;table&gt;</span> : 표 전체를 감싸는 태그</li>
+            <li><span class="tag-name">&lt;tr&gt;</span> : 표의 한 줄(Row)을 의미</li>
+            <li><span class="tag-name">&lt;th&gt;</span> : 제목 셀 (굵게, 가운데 정렬됨)</li>
+            <li><span class="tag-name">&lt;td&gt;</span> : 일반 데이터 셀</li>
+        </ul>
+
+        <div class="code-block">&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;이름&lt;/th&gt;
+    &lt;th&gt;나이&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;홍길동&lt;/td&gt;
+    &lt;td&gt;20&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</div>
+
+        <div class="preview-block">
+            <table>
+                <tr>
+                    <th>이름</th>
+                    <th>나이</th>
+                </tr>
+                <tr>
+                    <td>홍길동</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>이순신</td>
+                    <td>35</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
