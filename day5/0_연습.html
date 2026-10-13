@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 100px minmax(500px, auto) 100px;
+            grid-template-areas: 
+            "header header"
+            "side contents";
+            
+        }
+        #container > div {
+            border-radius: 10px; 
+            padding: 20px;
+        }
+
+        /* 헤더 */
+        #header{
+            grid-area: header;
+            background-color: #e2edf3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo{
+            color: #03c75a;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .search input{
+            width: 220px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .search button{
+            padding: 10px;
+            background-color:  #4285f4;
+            color: white;
+            border:none;
+            border-radius: 5px;
+        }
+            
+
+        #side{
+            grid-area: side;
+            background-color: white;
+            font-size: 13px;
+        }
+
+        .category{
+            padding: 10px;
+        }
+
+        .select{
+            background-color:  #4ac9bd;
+            color: white;
+            border-radius: 5px;
+        }
+
+        #contents{
+            grid-area: contents;
+            background-color: #fafafa;
+        }
+        
+
+        /* #footer{grid-area: footer;} */
+
+
+        .card-container {
+            padding: 30px 10px;
+            display: flex;
+            flex-wrap: wrap; /* 다음줄 자동 넘김 */
+            justify-content: center; 
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            width: 220px;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column; /* 세로 배치 */
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            margin: 0;
+            border-radius: 30px;
+            border: none;
+        }
+
+        .card-title {
+            font-size: 13px;
+            margin-top: 10px 0 5px;
+        }
+
+        .card-desc {
+            color: red;
+            font-size: 12px;
+            height: 5px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="logo">naver</div>
+
+            <div class="search">
+                    <input type="text" placeholder="검색어를 입력하세요...">
+                    <button>검색</button>
+            </div>
+
+            <div> 🔔 👤홍길동</div>
+        </div>
+
+
+        <div id="side">
+            <b>카테고리</b>
+
+            <div class="category select">전체 상품</div>
+            <div class="category">스마트폰</div>
+            <div class="category">게임기</div>
+            <div class="category">노트북</div>
+            <div class="category">기타</div>
+
+            <br>
+
+            <b>가격대</b>
+
+            <p><input type="checkbox"> 1만원 이하</p>
+            <p><input type="checkbox"> 1만원 ~ 3만원</p>
+            <p><input type="checkbox"> 3만원 ~ 5만원</p>
+            <p><input type="checkbox"> 5만원 이상</p>
+
+        </div>
+
+
+        <div id="contents">
+           
+            <div class="card-container">
+
+                <div class="card">
+                    <img src="../images/ryan1.jpg" alt="상품 A">
+                    <h2 class="card-title">상품 A</h2>
+                    <p class="card-desc">15,900</p>
+                    
+                </div>
+                <div class="card">
+                    <img src="../images/ryan2.jpg" alt="상품 B">
+                    <h2 class="card-title">상품 B</h2>
+                    <p class="card-desc">39,900</p>
+                    
+                </div>
+
+                <div class="card">
+                    <img src="../images/ryan2.jpg" alt="상품 C">
+                    <h2 class="card-title">상품 C</h2>
+                    <p class="card-desc">39,900</p>
+                    
+                </div>
+
+                <div class="card">
+                    <img src="../images/ryan2.jpg" alt="상품 D">
+                    <h2 class="card-title">상품 D</h2>
+                    <p class="card-desc">39,900</p>
+                    
+                </div>
+
+                <div class="card">
+                    <img src="../images/ryan2.jpg" alt="상품 E">
+                    <h2 class="card-title">상품 E</h2>
+                    <p class="card-desc">39,900</p>
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+       
+    </div>
+</body>
+</html>
