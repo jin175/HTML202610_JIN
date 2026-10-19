@@ -21,11 +21,9 @@ body {
     
 }
 
-
-
 .top {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     padding: 30px 8%;
 }
@@ -35,7 +33,6 @@ body {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    
 }
 
 .logo span {
@@ -111,7 +108,7 @@ body {
 
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 25px 8%;
     border-top: 1px solid #ffffff15;
     color: #777687;
@@ -127,39 +124,13 @@ footer {
 }
 
 
-@keyframes appear {
+@keyframes softRise {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(7px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-@media (max-width: 600px) {
-    .top {
-        padding: 24px 6%;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .clock {
-        font-size: 10px;
-        text-align: right;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-        letter-spacing: -1px;
-    }
-
-    footer {
-        padding: 20px 6%;
-        gap: 15px;
-        font-size: 9px;
-    }
-}
-
-
