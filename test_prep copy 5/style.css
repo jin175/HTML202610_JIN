@@ -12,7 +12,6 @@ body {
     line-height: 1.8;
 }
 
-/* 전체 레이아웃 */
 #wrap {
     display: flex;
     max-width: 1050px;
@@ -24,7 +23,7 @@ body {
     box-shadow: 0 18px 50px rgba(53, 45, 80, 0.10);
 }
 
-/* 왼쪽 프로필 */
+/* 왼쪽 */
 #container {
     flex: 0 0 300px;
     padding: 45px 25px;
@@ -239,7 +238,7 @@ mark {
     transform: translateY(-2px);
 }
 
-/* 학력 표 */
+/* 학력 */
 .table-wrap {
     width: 100%;
     overflow-x: auto;
@@ -282,7 +281,7 @@ th {
 
 
 
-/* 메인으로 돌아가기 버튼 */
+/* 메인 버튼 */
 .home-btn {
     display: block;
     width: fit-content;
@@ -304,42 +303,7 @@ th {
     transform: translateY(-2px);
 }
 
-/* 모바일 */
-@media (max-width: 700px) {
-    body {
-        padding: 20px 12px;
-    }
-
-    #wrap {
-        flex-direction: column;
-        border-radius: 14px;
-    }
-
-    #container {
-        flex-basis: auto;
-        padding: 32px 20px;
-    }
-
-    #namecard img {
-        width: 135px;
-        height: 135px;
-    }
-
-    #main {
-        padding: 30px 22px;
-    }
-
-    .subtitle {
-        font-size: 19px;
-    }
-
-    section {
-        margin-bottom: 32px;
-    }
-}
-
-
-/* 프로필 영역 살짝 등장 */
+/* 프로필 영역 */
 #container {
     animation: profileAppear 0.8s ease-out both;
 }
