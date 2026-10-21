@@ -12,7 +12,6 @@ body {
     line-height: 1.8;
 }
 
-/* 전체 레이아웃 */
 #wrap {
     display: flex;
     max-width: 1050px;
@@ -24,7 +23,7 @@ body {
     box-shadow: 0 18px 50px rgba(53, 45, 80, 0.10);
 }
 
-/* 왼쪽 프로필 */
+/* 왼쪽 */
 #container {
     flex: 0 0 300px;
     padding: 45px 25px;
@@ -33,15 +32,25 @@ body {
     text-align: center;
 }
 
-#namecard img {
-    width: 155px;
-    height: 155px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    margin-bottom: 18px;
-    box-shadow: 0 8px 25px #17142155;
+.box {
+        width: 155px;
+        height: 155px;
+        background-image: url("images/123.jpg");
+        background-size: cover;
+            
+        border-radius: 50%;
+        border: 3px solid #fff;
+        margin: 50px auto 18px;
+        box-shadow: 0 8px 25px #17142155;
+
+        transition: transform 3s, background-image 0.5s 1s;
+
+    }
+.box:hover {
+    transform: rotateY(180deg) scaleX(-1);
+    background-image: url("images/image.jpg"); ;
 }
+
 
 #namecard h1 {
     margin: 0;
@@ -103,6 +112,64 @@ body {
     border-color: #c0b2ff;
     color: #302b40;
 }
+
+
+.card {
+    width: 200px;
+    padding: 20px;
+    margin: 20px auto;
+    
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+
+
+.rotate-turn {
+    transition: transform 5s ease;
+    cursor: pointer;
+}
+
+
+.rotate-turn:hover {
+        transform: rotate(5turn);
+    }
+
+
+
+
+/* 히든카드 */
+#secret-trigger {
+    cursor: pointer;
+    user-select: none;
+}
+
+.hidden-card {
+    display: none;
+    margin-top: 50px;
+    padding: 15px 10px;
+    border: 1px solid #9383ca;
+    border-radius: 12px;
+    background: #454056;
+    color: #fff;
+    font-size: 13px;
+    animation: profileAppear 0.5s ease-out both;
+}
+
+.hidden-card p {
+    margin-bottom: 0;
+    color: #d0c4ff;
+    font-size: 12px;
+}
+
+.hidden-card.show {
+    display: block;
+}
+
+
+
+
 
 /* 오른쪽 본문 */
 #main {
@@ -202,7 +269,7 @@ mark {
     transform: translateY(-2px);
 }
 
-/* 학력 표 */
+/* 학력 */
 .table-wrap {
     width: 100%;
     overflow-x: auto;
@@ -243,15 +310,14 @@ th {
     font-weight: 600;
 }
 
-tbody tr:last-child td {
-    border-bottom: none;
-}
 
 tbody tr:hover {
     background: #faf8ff;
 }
 
-/* 메인으로 돌아가기 버튼 */
+
+
+/* 메인 버튼 */
 .home-btn {
     display: block;
     width: fit-content;
@@ -273,42 +339,7 @@ tbody tr:hover {
     transform: translateY(-2px);
 }
 
-/* 모바일 */
-@media (max-width: 700px) {
-    body {
-        padding: 20px 12px;
-    }
-
-    #wrap {
-        flex-direction: column;
-        border-radius: 14px;
-    }
-
-    #container {
-        flex-basis: auto;
-        padding: 32px 20px;
-    }
-
-    #namecard img {
-        width: 135px;
-        height: 135px;
-    }
-
-    #main {
-        padding: 30px 22px;
-    }
-
-    .subtitle {
-        font-size: 19px;
-    }
-
-    section {
-        margin-bottom: 32px;
-    }
-}
-
-
-/* 프로필 영역 살짝 등장 */
+/* 프로필 영역 */
 #container {
     animation: profileAppear 0.8s ease-out both;
 }
@@ -324,6 +355,3 @@ tbody tr:hover {
         transform: translateY(0);
     }
 }
-
-
-
